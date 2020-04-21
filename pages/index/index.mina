@@ -73,7 +73,7 @@ Page({
   }    
 </json>
 
-<style lang="sass">
+<style lang="stylus">
 .userinfo
   display: flex
   flex-direction: column

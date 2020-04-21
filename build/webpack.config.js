@@ -37,7 +37,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.styl$/,
         use: [
           {
             loader: 'style-loader'
@@ -60,7 +60,7 @@ module.exports = {
           //   }
           // },
           {
-            loader: 'sass-loader',
+            loader: 'stylus-loader',
             options: {
               sourceMap: true
             }

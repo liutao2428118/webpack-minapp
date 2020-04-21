@@ -30,7 +30,7 @@ Page({
   }    
 </json>
 
-<style lang='sass'>
+<style lang='stylus'>
 .log-list
   display: flex
   flex-direction: column

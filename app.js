@@ -1,4 +1,4 @@
-import './style/base.sass';
+import './style/base.styl';
 import  u from 'util'
 
 //app.js
