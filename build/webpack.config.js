@@ -1,11 +1,13 @@
 const { resolve } = require('path');
 const r = url => resolve(__dirname, url);
 const webpack = require('webpack');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin'); // 清空打包目录的插件
 const CopyWebpackPlugin = require('copy-webpack-plugin'); //拷贝插件
 const ProgressBarPlugin = require('progress-bar-webpack-plugin'); //编译进度条插件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //抽取样式到单独文件的插件
 const UglifyjsPlugin = require('uglifyjs-webpack-plugin'); //js压缩插件
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); // 压缩css的插件
+
 
 module.exports = {
   devtool: false,
@@ -89,6 +91,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin({
+      dry: true, // 模拟删除
+      verbose: true, // 写入日志
+      cleanOnceBeforeBuildPatterns: [r('../dist')]
+    }), // 清空打包目录
     //提取出来样式写入到.wxss中
     new MiniCssExtractPlugin({
       filename: '[name].wxss'

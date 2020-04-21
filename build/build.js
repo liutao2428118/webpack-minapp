@@ -1,4 +1,4 @@
-require('shelljs/global');
+
 const webpack = require('webpack');
 const fs = require('fs');
 const { resolve } = require('path');
@@ -6,11 +6,6 @@ const r = url => resolve(__dirname, url);
 
 const webpackConfig = require('./webpack.config');
 const minaConfig = require(r('./mina.config'));
-const assetsPath = r('../dist');
-
-//shelljs工具函数，每次打包先清除输出目录，再创建输出目录（也就是dist文件夹）
-rm('-rf', assetsPath);
-mkdir(assetsPath);
 
 var renderConfig = webpackConfig;
 

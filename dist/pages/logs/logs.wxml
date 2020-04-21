@@ -1,0 +1,1 @@
+<view class="container log-list"><block wx:for="" wx:for-item="log"><text class="log-item">. </text></block></view>
