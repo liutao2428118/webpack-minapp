@@ -71,10 +71,10 @@ module.exports = {
       },
       {
         test: /\.mina$/,
-        loader: 'wechat-mina-loader',
+        loader: 'wechat-mini-loader',
         options: {
           path: r('../'),
-          dist: './dist'
+          // dist: './dist'
         }
       }
     ]

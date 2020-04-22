@@ -14,6 +14,10 @@ module.exports = {
       navigationBarTextStyle: 'black'
     }
   },
+  components: [
+    'pages/components/demo',
+    // 'pages/components/demo2',
+  ],
   style: {
     url: r('../style/base.sass'),
     lang: 'sass'

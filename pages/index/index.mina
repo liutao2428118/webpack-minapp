@@ -7,6 +7,7 @@
         text.userinfo-nickname {{userInfo.nickName}}
     view.usermotto
       text.user-motto {{motto}}
+    demo( wx:name="comp")
 </template>
 
 <script>
@@ -16,7 +17,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World 小涛涛',
+    motto: 'Hello World 你好',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -69,9 +70,14 @@ Page({
 
 <json>
   {
-    "navigationBarTitleText": "首页"
-  }    
+    "navigationBarTitleText": "我是首页标题",
+    "usingComponents": {
+       "demo": "../components/demo" 
+    }
+  }
 </json>
+
+
 
 <style lang="stylus">
 .userinfo
@@ -87,4 +93,3 @@ Page({
 .usermotto
   margin-top: 200px
 </style>
-
