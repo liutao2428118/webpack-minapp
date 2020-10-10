@@ -18,9 +18,5 @@ module.exports = {
     'pages/components/demo',
     // 'pages/components/demo2',
   ],
-  style: {
-    url: r('../style/base.sass'),
-    lang: 'sass'
-  },
-  app: r('../app.js')
+  app: r('./src/app.js')
 }

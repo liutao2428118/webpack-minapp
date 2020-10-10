@@ -1,9 +1,6 @@
 import regeneratorRuntime from "regenerator-runtime"
 global.regeneratorRuntime = regeneratorRuntime
 
-// import _ from 'loadsh'
-// global._ = _
-
 import * as R from 'ramda'
 global.R = R
 

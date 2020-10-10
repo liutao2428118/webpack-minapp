@@ -1,5 +1,5 @@
 import './style/base.styl';
-// import './util/vendor';
+import './vendor';
 import  u from 'util'
 
 //app.js

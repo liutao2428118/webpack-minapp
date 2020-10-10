@@ -18,7 +18,7 @@ module.exports = {
   },
   resolve: {
     alias: { // 配置别名
-      util: r('../util/util')
+      util: r('../src/util/util')
     }
   },
   module: {
@@ -48,19 +48,6 @@ module.exports = {
           {
             loader: 'css-loader' //css-loader 解释(interpret) @import 和 url()
           },
-          // 添加postcss-loader会报错，后面解决
-          // {
-          //   loader: 'postcss-loader',
-          //   options: {
-          //     ident: 'postcss', // options中应用require 需要ident申明一下
-          //     sourceMap: true,
-          //     plugins: loader => [
-          //       require('autoprefixer')({ // require进来autoprefixer
-          //         browsers: ['> 0.15% in CN']
-          //       }) // autoprefixer添加前缀,browser设置支持哪些浏览器
-          //     ]
-          //   }
-          // },
           {
             loader: 'stylus-loader',
             options: {
@@ -74,7 +61,7 @@ module.exports = {
         loader: 'wechat-mini-loader',
         options: {
           path: r('../'),
-          // dist: './dist'
+          dist: './dist'
         }
       }
     ]

@@ -34,6 +34,6 @@
     "consolidate": "^0.15.1",
     "pug": "^2.0.4",
     "ramda": "^0.27.0",
-    "regenerator-runtime": "^0.13.5"
+    "regenerator-runtime": "^0.10.5"
   }
 }

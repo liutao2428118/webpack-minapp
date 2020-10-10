@@ -6,14 +6,14 @@ const r = url => resolve(__dirname, url);
 
 const webpackConfig = require('./webpack.config');
 const projectConfig = require(r('../project.config'));
-const minaConfig = require(r('./mina.config'));
+const minaConfig = require(r('../mina.config'));
 
 var renderConfig = webpackConfig;
 
 // 设置打包入口
 const entrys = minaConfig.json.pages.concat(minaConfig.components)
 renderConfig.entry = entrys.reduce((en, i) => {
-  en[i] = resolve(process.cwd(), './', `${i}.mina`)
+  en[i] = resolve(process.cwd(), './src', `${i}.mina`)
 
   return en;
 }, {});

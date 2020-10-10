@@ -1,7 +1,10 @@
 <template lang='pug'>
   view.container
     view.userinfo
-      button(wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo") 获取头像昵称
+      button(
+          wx:if="{{!hasUserInfo}}" 
+          open-type="getUserInfo" 
+          bindgetuserinfo="getUserInfo") 获取头像昵称
       block(wx:else)
         image.userinfo-avatar(bindtap="bindViewTap"  src="{{userInfo.avatarUrl}}" mode="cover")
         text.userinfo-nickname {{userInfo.nickName}}
@@ -28,7 +31,7 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  async onLoad () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
